@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b930ec4e-0b74-4a33-ba40-97ebc35fe981" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/by/gsu/epamlab/filters/AbstractFilter.java" afterPath="$PROJECT_DIR$/src/by/gsu/epamlab/filters/AbstractFilter.java" />
     </list>
     <ignored path="webFinal.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -45,8 +46,8 @@
       <file leaf-file-name="AbstractFilter.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/by/gsu/epamlab/filters/AbstractFilter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.17465754">
-              <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+            <state vertical-scroll-proportion="0.26631853">
+              <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -936,7 +937,7 @@
       <workItem from="1469826741525" duration="467000" />
       <workItem from="1469884887600" duration="1448000" />
       <workItem from="1470837670488" duration="631000" />
-      <workItem from="1470840670205" duration="931000" />
+      <workItem from="1470840670205" duration="959000" />
     </task>
     <task id="LOCAL-00001" summary="Test comment">
       <created>1470838203849</created>
@@ -950,11 +951,17 @@
       <option name="project" value="LOCAL" />
       <updated>1470841780289</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Test comment 2">
+      <created>1470841790824</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1470841790824</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="249275000" />
+    <option name="totallyTimeSpent" value="249303000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -977,7 +984,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38071895" sideWeight="0.50907713" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20121029" sideWeight="0.521164" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1054,20 +1061,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/tomcat8/lib/servlet-api.jar!/javax/servlet/Filter.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1827957">
-          <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/tomcat8/lib/servlet-api.jar!/javax/servlet/http/HttpServletResponse.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="52" selection-start-line="12" selection-start-column="52" selection-end-line="12" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/tomcat8/lib/servlet-api.jar!/javax/servlet/ServletResponse.class">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1423,10 +1416,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/vcs.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/by/gsu/epamlab/filters/AbstractFilter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17465754">
-          <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+        <state vertical-scroll-proportion="0.26631853">
+          <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
           <folding />
         </state>
       </provider>
