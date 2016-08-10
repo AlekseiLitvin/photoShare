@@ -17,6 +17,6 @@ public class AbstractFilter implements Filter {
 
     @Override
     public void destroy() {
-        //some code
+
     }
 }
