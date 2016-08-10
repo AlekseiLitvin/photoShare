@@ -46,8 +46,8 @@
       <file leaf-file-name="AbstractFilter.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/by/gsu/epamlab/filters/AbstractFilter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.26631853">
-              <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
+            <state vertical-scroll-proportion="0.22193211">
+              <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -937,7 +937,7 @@
       <workItem from="1469826741525" duration="467000" />
       <workItem from="1469884887600" duration="1448000" />
       <workItem from="1470837670488" duration="631000" />
-      <workItem from="1470840670205" duration="959000" />
+      <workItem from="1470840670205" duration="992000" />
     </task>
     <task id="LOCAL-00001" summary="Test comment">
       <created>1470838203849</created>
@@ -957,11 +957,17 @@
       <option name="project" value="LOCAL" />
       <updated>1470841790824</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Test comment 2">
+      <created>1470841820232</created>
+      <option name="number" value="00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1470841820232</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="249303000" />
+    <option name="totallyTimeSpent" value="249336000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1426,7 +1432,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="-9.142858">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
@@ -1434,8 +1440,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/by/gsu/epamlab/filters/AbstractFilter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.26631853">
-          <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
+        <state vertical-scroll-proportion="0.22193211">
+          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
           <folding />
         </state>
       </provider>
