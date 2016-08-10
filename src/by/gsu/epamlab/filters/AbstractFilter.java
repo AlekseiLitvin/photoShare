@@ -4,7 +4,8 @@ import javax.servlet.*;
 import java.io.IOException;
 
 public class AbstractFilter implements Filter {
-    //empty method
+
+    //one more coment
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
 
