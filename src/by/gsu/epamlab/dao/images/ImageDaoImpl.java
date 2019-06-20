@@ -30,7 +30,7 @@ public class ImageDaoImpl implements ImageDao {
         Session session = HibernateUtil.getSession();
         Criteria criteria = session.createCriteria(Image.class);
         criteria.add(Restrictions.eq(Constants.ID, id));
-        return  (Image)criteria.uniqueResult();
+        return (Image) criteria.uniqueResult();
     }
 
     @Override
@@ -41,12 +41,12 @@ public class ImageDaoImpl implements ImageDao {
             tr = session.beginTransaction();
             session.save(new Image(image, new Date(), description, user));
             tr.commit();
-        }catch (Exception e){
+        } catch (Exception e) {
             if (tr != null) {
                 tr.rollback();
             }
             throw new DaoException(e);
-        }finally {
+        } finally {
             session.close();
         }
     }
@@ -78,12 +78,12 @@ public class ImageDaoImpl implements ImageDao {
 
             query.executeUpdate();
             tr.commit();
-        }catch (Exception e){
+        } catch (Exception e) {
             if (tr != null) {
                 tr.rollback();
             }
             throw new DaoException(e);
-        }finally {
+        } finally {
             session.close();
         }
     }

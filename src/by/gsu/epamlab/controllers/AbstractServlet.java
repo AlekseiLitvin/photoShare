@@ -21,6 +21,6 @@ public class AbstractServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        jumpError(ConstantsError.METHOD_GET_ERROR , ConstantsAddress.REGISTER_PAGE, req, resp);
+        jumpError(ConstantsError.METHOD_GET_ERROR, ConstantsAddress.REGISTER_PAGE, req, resp);
     }
 }

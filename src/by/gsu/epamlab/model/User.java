@@ -12,7 +12,7 @@ import java.util.List;
 
 @Entity
 @Table(name = "users")
-public class User implements Serializable, HttpSessionBindingListener{
+public class User implements Serializable, HttpSessionBindingListener {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

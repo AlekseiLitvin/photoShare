@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(name = "registration" ,urlPatterns = "/registration")
+@WebServlet(name = "registration", urlPatterns = "/registration")
 public class RegServlet extends AbstractServlet {
 
     @Override
@@ -26,7 +26,7 @@ public class RegServlet extends AbstractServlet {
         String passwordCheck = req.getParameter(Constants.PASSWORD_CHECK);
 
         String validationResult = RegValidator.validation(login, password, passwordCheck);
-        if (!validationResult.equals(Constants.OK)){
+        if (!validationResult.equals(Constants.OK)) {
             jumpError(validationResult, ConstantsAddress.REGISTER_PAGE, req, resp);
             return;
         }
@@ -34,12 +34,12 @@ public class RegServlet extends AbstractServlet {
         password = MD5Encoder.getEncodedString(password);
         UserDao dao = UserDaoFactory.getClassFromFactory();
         try {
-            if (dao.addUser(login, password)){
+            if (dao.addUser(login, password)) {
                 resp.sendRedirect(ConstantsAddress.START_SERVLET);
-            }else {
+            } else {
                 jumpError(ConstantsError.USER_ALREADY_EXISTS, ConstantsAddress.REGISTER_PAGE, req, resp);
             }
-        }catch (DaoException e){
+        } catch (DaoException e) {
             System.err.println(e.getMessage());
             jumpError(ConstantsError.DAO_ERROR, ConstantsAddress.REGISTER_PAGE, req, resp);
         }

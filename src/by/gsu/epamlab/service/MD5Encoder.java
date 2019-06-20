@@ -7,7 +7,7 @@ import java.security.NoSuchAlgorithmException;
 
 public class MD5Encoder {
 
-    public static String getEncodedString(String pass){
+    public static String getEncodedString(String pass) {
         final int MD5_RESULT_LENGTH = 32;
         final String ENCTYPE_ALGORITHM = "MD5";
         try {
@@ -17,7 +17,7 @@ public class MD5Encoder {
             byte[] digest = md.digest();
 
             StringBuilder sb = new StringBuilder(MD5_RESULT_LENGTH);
-            for (byte b : digest){
+            for (byte b : digest) {
                 sb.append(String.format("%02x", b & 0xff));
             }
 

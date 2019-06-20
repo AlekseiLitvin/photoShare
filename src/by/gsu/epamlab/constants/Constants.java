@@ -14,7 +14,7 @@ public class Constants {
     public static final String BLACK_AND_WHITE_FILTER = "blackAndWhite";
     public static final String USER_IMAGE_LIST = "userImageList";
     public static final int MAX_PASS_LENGTH = 10, MAX_LOGIN_LENGTH = 10;
-    public static final int MIN_PASS_LENGTH = 3, MIN_LOGIN_LENGTH =3;
+    public static final int MIN_PASS_LENGTH = 3, MIN_LOGIN_LENGTH = 3;
     public static final int MAX_DESCRIPTION_LENGTH = 30;
     public static final String OK = "ok";
     public static final String LOGIN_PATTERN = ".{" + MIN_LOGIN_LENGTH + "," + MAX_LOGIN_LENGTH + "}";

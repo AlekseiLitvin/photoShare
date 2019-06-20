@@ -18,13 +18,13 @@ public class UrlFilter extends AbstractFilter {
         HttpServletRequest request = (HttpServletRequest) servletRequest;
         HttpServletResponse response = (HttpServletResponse) servletResponse;
         String id = request.getPathInfo();
-        if (id == null){
+        if (id == null) {
             response.sendRedirect(ConstantsAddress.MAIN_PAGE_SERVLET);
             return;
         }
         try {
             Integer.parseInt(id.substring(1));
-        }catch (NumberFormatException e){
+        } catch (NumberFormatException e) {
             response.sendRedirect(ConstantsAddress.MAIN_PAGE_SERVLET);
             return;
         }

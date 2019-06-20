@@ -13,7 +13,7 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
 
-@WebFilter(filterName = "LoginFilter" , urlPatterns = {"/mainpage", "/mypage.jsp", "/logout", "/download/*" , "/delete/*"} )
+@WebFilter(filterName = "LoginFilter", urlPatterns = {"/mainpage", "/mypage.jsp", "/logout", "/download/*", "/delete/*"})
 public class LoginFilter extends AbstractFilter {
 
     @Override
@@ -22,7 +22,7 @@ public class LoginFilter extends AbstractFilter {
         HttpServletRequest request = (HttpServletRequest) servletRequest;
         HttpSession session = request.getSession();
         User user = (User) session.getAttribute(Constants.USER);
-        if (user == null){
+        if (user == null) {
             session.invalidate();
             HttpServletResponse Response = (HttpServletResponse) servletResponse;
             Response.sendRedirect(ConstantsAddress.START_SERVLET);

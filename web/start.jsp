@@ -5,7 +5,7 @@
     <title>Start</title>
 </head>
 <body>
-    <c:redirect url="start"/>
+<c:redirect url="start"/>
 
 </body>
 </html>

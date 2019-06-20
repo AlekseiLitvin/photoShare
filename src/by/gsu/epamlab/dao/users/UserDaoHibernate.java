@@ -19,7 +19,7 @@ public class UserDaoHibernate implements UserDao {
             Criteria criteria = session.createCriteria(User.class);
             criteria.add(Restrictions.eq(Constants.LOGIN, login));
             return (User) criteria.uniqueResult();
-        }finally {
+        } finally {
             if (session != null) {
                 session.close();
             }
@@ -33,8 +33,8 @@ public class UserDaoHibernate implements UserDao {
         Session session = HibernateUtil.getSession();
         Transaction tr = null;
         try {
-            synchronized (UserDaoHibernate.class){
-                if (getUser(login) == null){
+            synchronized (UserDaoHibernate.class) {
+                if (getUser(login) == null) {
                     tr = session.beginTransaction();
                     session.save(new User(login));
                     SQLQuery query = session.createSQLQuery(UPDATE_PASSWORD_QUERY);
@@ -43,16 +43,16 @@ public class UserDaoHibernate implements UserDao {
                     query.executeUpdate();
                     tr.commit();
                     return true;
-                }else {
+                } else {
                     return false;
                 }
             }
-        }catch (Exception e){
+        } catch (Exception e) {
             if (tr != null) {
                 tr.rollback();
             }
             throw new DaoException(e);
-        }finally {
+        } finally {
             session.close();
         }
     }
@@ -68,7 +68,7 @@ public class UserDaoHibernate implements UserDao {
             query.setString(LOGIN_INDEX, login);
             String userPassword = (String) query.uniqueResult();
             return password.equals(userPassword);
-        }finally {
+        } finally {
             if (session != null) {
                 session.close();
             }

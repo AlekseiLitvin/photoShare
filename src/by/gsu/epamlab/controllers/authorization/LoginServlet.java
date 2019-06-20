@@ -27,18 +27,18 @@ public class LoginServlet extends AbstractServlet {
 
         UserDao dao = UserDaoFactory.getClassFromFactory();
         try {
-            if(login == null || password == null || login.trim().isEmpty()) {
+            if (login == null || password == null || login.trim().isEmpty()) {
                 jumpError(ConstantsError.LOGIN_OR_PASSWORD_ABSENT_ERROR, ConstantsAddress.LOGIN_PAGE, req, resp);
                 return;
             }
 
             User user = dao.getUser(login);
             password = MD5Encoder.getEncodedString(password);
-            if (user == null || !dao.checkPassword(login, password)){
+            if (user == null || !dao.checkPassword(login, password)) {
                 jumpError(ConstantsError.WRONG_LOGIN_OR_PASSWORD, ConstantsAddress.LOGIN_PAGE, req, resp);
                 return;
             }
-            if (LoggedUsers.usersSet.contains(user)){
+            if (LoggedUsers.usersSet.contains(user)) {
                 jumpError(ConstantsError.USER_ALREADY_LOGGED, ConstantsAddress.LOGIN_PAGE, req, resp);
                 return;
             }
@@ -47,7 +47,7 @@ public class LoginServlet extends AbstractServlet {
 
             resp.sendRedirect(ConstantsAddress.MAIN_PAGE_SERVLET);
 
-        }catch (DaoException e){
+        } catch (DaoException e) {
             jumpError(ConstantsError.DAO_ERROR, ConstantsAddress.REGISTER_PAGE, req, resp);
         }
     }

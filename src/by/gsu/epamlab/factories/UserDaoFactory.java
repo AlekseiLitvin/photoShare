@@ -4,7 +4,7 @@ import by.gsu.epamlab.dao.users.UserDao;
 import by.gsu.epamlab.dao.users.UserDaoHibernate;
 
 public class UserDaoFactory {
-    public static UserDao getClassFromFactory(){
+    public static UserDao getClassFromFactory() {
         return new UserDaoHibernate();
 //        return new UserDaoMemory();
     }

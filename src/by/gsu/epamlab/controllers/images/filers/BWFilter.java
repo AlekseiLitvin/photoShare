@@ -12,11 +12,11 @@ import java.io.InputStream;
 
 public class BWFilter {
     public static byte[] convertToBlackAndWhite(byte[] image) {
-        try(InputStream inputStream = new ByteArrayInputStream(image);
-            ByteArrayOutputStream outputStream = new ByteArrayOutputStream() ) {
+        try (InputStream inputStream = new ByteArrayInputStream(image);
+             ByteArrayOutputStream outputStream = new ByteArrayOutputStream()) {
 
             BufferedImage originalImage = ImageIO.read(inputStream);
-            BufferedImage blackAndWhiteImg = new BufferedImage(originalImage.getWidth(),originalImage.getHeight(),
+            BufferedImage blackAndWhiteImg = new BufferedImage(originalImage.getWidth(), originalImage.getHeight(),
                     BufferedImage.TYPE_BYTE_GRAY);
             Graphics2D graphics = blackAndWhiteImg.createGraphics();
             graphics.drawImage(originalImage, 0, 0, null);

@@ -32,7 +32,7 @@ public class UploadImageServlet extends AbstractServlet {
             String blackAndWhite = req.getParameter(Constants.BLACK_AND_WHITE_FILTER);
 
             String validationResult = validate(part, description);
-            if (!Constants.OK.equals(validationResult)){
+            if (!Constants.OK.equals(validationResult)) {
                 jumpError(validationResult, ConstantsAddress.MAIN_PAGE_SERVLET, req, resp);
                 return;
             }
@@ -42,7 +42,7 @@ public class UploadImageServlet extends AbstractServlet {
             inputStream.read(image);
             inputStream.close();
 
-            if (blackAndWhite != null){
+            if (blackAndWhite != null) {
                 image = BWFilter.convertToBlackAndWhite(image);
             }
 
@@ -53,19 +53,19 @@ public class UploadImageServlet extends AbstractServlet {
 
             resp.sendRedirect(ConstantsAddress.MAIN_PAGE_SERVLET);
 
-        }catch (IllegalStateException e){
+        } catch (IllegalStateException e) {
             jumpError(ConstantsError.FILE_SIZE_ERROR, ConstantsAddress.MAIN_PAGE, req, resp);
         }
     }
 
-    private String validate(Part part, String description){
-        if (part.getSize() == 0){
+    private String validate(Part part, String description) {
+        if (part.getSize() == 0) {
             return ConstantsError.FILE_IS_EMPTY;
         }
-        if (!part.getContentType().startsWith(Constants.IMAGE_PREFIX)){
+        if (!part.getContentType().startsWith(Constants.IMAGE_PREFIX)) {
             return ConstantsError.NO_IMAGE_ERROR;
         }
-        if (description != null && description.length() >= Constants.MAX_DESCRIPTION_LENGTH){
+        if (description != null && description.length() >= Constants.MAX_DESCRIPTION_LENGTH) {
             return ConstantsError.MAX_DESCR_LENGTH_ERR;
         }
 

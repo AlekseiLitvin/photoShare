@@ -21,7 +21,7 @@ public class DownloadImageServlet extends HttpServlet {
         ImageDao imageDao = ImageDaoFactory.getClassFromFactory();
         Image image = imageDao.getImageById(id);
 
-        if (image == null){
+        if (image == null) {
             resp.sendRedirect(ConstantsAddress.ERROR_PAGE);
             return;
         }
@@ -35,8 +35,7 @@ public class DownloadImageServlet extends HttpServlet {
 
         resp.setHeader("Content-disposition", "attachment; filename = img" + image.getId() + ".jpg;");
 
-        try
-        {
+        try {
             bis = new BufferedInputStream(new ByteArrayInputStream(image.getImage()));
             bos = new BufferedOutputStream(out);
 
@@ -45,9 +44,7 @@ public class DownloadImageServlet extends HttpServlet {
                 bos.flush();
             }
             resp.sendRedirect(ConstantsAddress.MAIN_PAGE_SERVLET);
-        }
-        finally
-        {
+        } finally {
             if (bis != null)
                 bis.close();
             if (bos != null)

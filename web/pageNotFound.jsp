@@ -4,6 +4,6 @@
     <title>Error page</title>
 </head>
 <body>
-    <img style="width: 100%" height="100%" src="img/error404.png">
+<img style="width: 100%" height="100%" src="img/error404.png">
 </body>
 </html>

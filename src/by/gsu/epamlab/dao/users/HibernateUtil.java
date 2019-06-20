@@ -16,24 +16,24 @@ public class HibernateUtil {
     static {
         try {
             Configuration conf = new Configuration()
-                .addAnnotatedClass(User.class)
-                .addAnnotatedClass(Image.class)
-                .configure();
+                    .addAnnotatedClass(User.class)
+                    .addAnnotatedClass(Image.class)
+                    .configure();
 
             ServiceRegistry serviceRegistry = new ServiceRegistryBuilder()
                     .applySettings(conf.getProperties()).buildServiceRegistry();
             sessionFactory = conf.buildSessionFactory(serviceRegistry);
-        }catch (Exception e){
+        } catch (Exception e) {
             System.err.println(ConstantsError.SESSION_FACTORY_ERROR + e);
             throw new DaoException(e);
         }
     }
 
-    public static Session getSession(){
+    public static Session getSession() {
         return sessionFactory.openSession();
     }
 
-    public static void closeSessionFactory(){
+    public static void closeSessionFactory() {
         sessionFactory.close();
     }
 }

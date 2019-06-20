@@ -7,7 +7,7 @@ import java.util.Map;
 
 public class UserDaoMemory implements UserDao {
 
-    private final Map<String, String> users = new HashMap<String, String>(){{
+    private final Map<String, String> users = new HashMap<String, String>() {{
         put("aaa", "aaa");
         put("bbb", "bbb");
         put("ccc", "ccc");
@@ -16,20 +16,20 @@ public class UserDaoMemory implements UserDao {
 
     @Override
     public User getUser(String login) {
-        if (users.containsKey(login)){
+        if (users.containsKey(login)) {
             return new User(login);
-        }else {
+        } else {
             return null;
         }
     }
 
     @Override
     public boolean addUser(String login, String password) {
-        synchronized (UserDaoMemory.class){
-            if (getUser(login) == null){
+        synchronized (UserDaoMemory.class) {
+            if (getUser(login) == null) {
                 users.put(login, password);
                 return true;
-            }else {
+            } else {
                 return false;
             }
         }

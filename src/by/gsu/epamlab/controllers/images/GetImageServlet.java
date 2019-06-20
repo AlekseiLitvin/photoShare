@@ -21,7 +21,7 @@ public class GetImageServlet extends HttpServlet {
         int id = Integer.parseInt(req.getPathInfo().substring(1));
         Image image = imageDao.getImageById(id);
 
-        if (image == null){
+        if (image == null) {
             resp.sendRedirect(ConstantsAddress.ERROR_PAGE);
             return;
         }

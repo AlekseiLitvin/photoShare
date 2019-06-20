@@ -20,7 +20,7 @@ public class MainPageInitializerServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         ImageDao imageDao = ImageDaoFactory.getClassFromFactory();
         HttpSession session = req.getSession();
-        User user  = (User) session.getAttribute(Constants.USER);
+        User user = (User) session.getAttribute(Constants.USER);
         req.setAttribute(Constants.USER_IMAGE_LIST, imageDao.getImageListById(user.getId()));
         RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(ConstantsAddress.MAIN_PAGE);
         dispatcher.forward(req, resp);
