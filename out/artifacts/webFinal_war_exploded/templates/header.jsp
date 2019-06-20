@@ -12,7 +12,7 @@
         </c:when>
         <c:otherwise>
 
-            <form name ="form" method="post" action="logout">
+            <form name="form" method="post" action="logout">
                 <ul>
                     <li>User: ${user.login}</li>
                     <li><a href="<c:url value="/mainpage"/>">My page</a></li>
